@@ -14,7 +14,18 @@ int main(){
 			cin >> matriz[i][j];
 		}
 	}
+	system("pause");
 	system("cls");
-
+	
+	cout << "Matriz actual:" << endl;
+	
+	for(int i = 0; i < 6; i++){
+		for(int j = 0; j < 6; j++){
+			cout << matriz[i][j] << " ";
+		}
+		cout << endl;
+	}
+	system("pause");
+	
 	return 0;
 }
