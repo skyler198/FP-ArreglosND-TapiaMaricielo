@@ -11,13 +11,23 @@ int main() {
     cout << "Ingrese los valores de la matriz 4x4:\n" << endl;
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++) {
-            cout << "Elemento [" << i << "][" << j << "]: ";
+            cout << "Posicion [" << i << "][" << j << "]: ";
             cin >> matriz[i][j];
         }
     }
     cout << endl;
     system("pause");
     system("cls");
-
+    
+    cout << "\n-------Matriz inicial:-------\n" << endl;
+    
+    for (int i = 0; i < 4; i++) {
+        cout << "           ";
+        for (int j = 0; j < 4; j++) {
+            cout << matriz[i][j] << " ";
+        }
+        cout << endl;
+    }
+    
     return 0;
 }
