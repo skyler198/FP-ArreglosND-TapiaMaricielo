@@ -27,6 +27,42 @@ int main(){
         }
         cout << endl;
     }
+    cout << endl;
+    system("pause");
+    
+    cout << "\n-------- \nRecorrido en espiral: --------\n" << endl;
+    
+    int inicioFila = 0;
+    int finFila = 4;
+    int inicioColumna = 0;
+    int finColumna = 4;
+
+    while (inicioFila <= finFila && inicioColumna <= finColumna) {
+   
+        for (int j = inicioColumna; j <= finColumna; j++) {
+            cout << matriz[inicioFila][j] << " ";
+        }
+        inicioFila++;
+
+        for (int i = inicioFila; i <= finFila; i++) {
+            cout << matriz[i][finColumna] << " ";
+        }
+        finColumna--;
+
+        if (inicioFila <= finFila) {
+            for (int j = finColumna; j >= inicioColumna; j--) {
+                cout << matriz[finFila][j] << " ";
+            }
+            finFila--;
+        }
+
+        if (inicioColumna <= finColumna) {
+            for (int i = finFila; i >= inicioFila; i--) {
+                cout << matriz[i][inicioColumna] << " ";
+            }
+            inicioColumna++;
+        }
+    }
     
     return 0;
 }
