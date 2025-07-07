@@ -21,6 +21,15 @@ int main() {
     cout << "\nIngrese el numero a buscar: ";
     cin >> valor;
 
+	cout << "\nEl numero " << valor << " se encuentra en:\n";
 
+    for (int i = 0; i < 3; i++){
+        for (int j = 0; j < 3; j++) {
+            if (matriz[i][j] == valor){
+                cout << "Fila " << i << ", Columna " << j << endl;
+            }
+        }
+    }
+    
     return 0;
 }
