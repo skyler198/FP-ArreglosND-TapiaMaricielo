@@ -14,13 +14,6 @@ int main() {
         }
     }  
     
-    for(int i = 0; i <10; i++){
-    	cout << "       ";
-    	for(int j = 0; j < 10; j++){
-    		cout << matrizMina[i][j] << " ";
-		}
-		cout << endl;
-	}
 	
 	//calcular cuantas minas hay cerca
 	/*
@@ -63,13 +56,26 @@ int main() {
 		}
 	}
 	
-	cout << "\nTablero\n" << endl;
-	for(int i = 0; i < 10; i++){
-		cout << "       ";
-		for(int j = 0; j < 10; j++){
-			cout << matrizCont[i][j] << " ";
-		}
-		cout << endl;
-	}
+	cout << "=============================================================" << endl;
+	cout << "                         BUSCA MINAS" << endl;
+	cout << "=============================================================\n" << endl;
+    cout << "      Tablero normal\t\t      tablero de minas\n";
+    cout << "      --------------\t\t      ----------------\n";
+
+
+	for (int i = 0; i < 10; i++) {
+        cout << "     ";
+        for (int j = 0; j < 10; j++) {
+            cout << matrizMina[i][j] << " ";
+        }
+
+        cout << "\t     ";
+
+        for (int j = 0; j < 10; j++) {
+            cout << matrizCont[i][j] << " ";
+        }
+
+        cout << endl;
+    }
 	return 0;	
 }
