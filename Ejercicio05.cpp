@@ -22,7 +22,26 @@ int main() {
 		cout << endl;
 	}
 	
+	int maximo = matriz[0][0], minimo = matriz[0][0];
+    int filaMax, colMax, filaMin, colMin;
 
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            if (matriz[i][j] > maximo) {
+                maximo = matriz[i][j];
+                filaMax = i;
+                colMax = j;
+            }
+            if (matriz[i][j] < minimo) {
+                minimo = matriz[i][j];
+                filaMin = i;
+                colMin = j;
+            }
+        }
+    }
+
+    cout << "Maximo valor: " << maximo << " en Fila " << filaMax << ", Columna " << colMax << endl;
+    cout << "Minimo valor: " << minimo << " en Fila " << filaMin << ", Columna " << colMin << endl;
 
     return 0;
 }
