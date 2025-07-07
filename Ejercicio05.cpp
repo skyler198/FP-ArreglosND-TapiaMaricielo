@@ -2,12 +2,17 @@
 using namespace std;
 
 int main() {
-    int matriz[4][4] = {
-        {5, 2, 7, 4},
-        {1, 6, 3, 8},
-        {9, 0, 3, 1},
-        {1, 3, 8, 5}
-    };
+	int matriz[4][4];
+	cout << "Ingrese el valores para la matriz: "<< endl;
+	for(int i = 0; i < 4; i++){
+		for(int j = 0; j < 4; j++){
+			cout << "Posicion [" << i << "][" << j << "]: ";
+			cin >> matriz[i][j];
+		}
+	}
+	system("pause");
+	system("cls");
+    
     cout << "   ---- Matriz: ----" << endl;
     for(int i = 0; i < 4; i++){
     	cout << "        ";
@@ -16,6 +21,8 @@ int main() {
 		}
 		cout << endl;
 	}
+	
+
 
     return 0;
 }
